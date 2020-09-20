@@ -13,7 +13,7 @@ class Transfer
   end 
   
   def valid?
-    sender.status == "open" && receiver.status == true
+    sender.bankaccount.valid? && receiver.bankaccount.valid?
   end 
   
   
